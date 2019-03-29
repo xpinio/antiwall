@@ -1,0 +1,32 @@
+{
+  "log": {
+    "loglevel": "warning",
+    "error": "/var/log/v2ray-error.log"
+  },
+
+  "inbound": {
+    "port": 12085,
+    "listen": "0.0.0.0",
+    "protocol": "vmess",
+    "settings": {
+      "udp": true,
+      "clients": [
+        {
+          "id": "--id--",
+          "alterId": --alterId--
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+        "path": "/publ"
+      }
+    }
+  },
+  "outbound": {
+    "protocol": "freedom",
+    "settings": {}
+  }
+
+}

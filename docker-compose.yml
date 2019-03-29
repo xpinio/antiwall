@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  antiwall:
+    container_name: antiwall
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./assets/config:/etc/myconfig
+    ports:
+      - "10053:10053"
+      - "10053:10053/udp"
+      - "1723:1723"
+      - "12085-12090:12085-12090"
+      - "12085-12090:12085-12090/udp"
+    privileged: true
+    restart: always
+    networks:
+      - backbone
+
+networks:
+  backbone:
+    external:
+      name: lnmp_backbone

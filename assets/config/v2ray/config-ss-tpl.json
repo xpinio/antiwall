@@ -1,0 +1,15 @@
+{
+  "inbound": {
+    "port": 12086,
+    "protocol": "shadowsocks",
+    "settings": {
+      "method": "aes-256-cfb",
+      "ota": false,
+      "password": "--vsspassword--"
+    }
+  },
+  "outbound": {
+    "protocol": "freedom",
+    "settings": {}
+  }
+}
